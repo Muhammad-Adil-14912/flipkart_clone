@@ -13,5 +13,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: Run product search tests
+        run: node --test
       - name: Check storefront script syntax
-        run: node --check script.js
+        run: node --check product-search.js && node --check script.js
