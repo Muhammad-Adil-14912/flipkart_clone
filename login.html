@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login - Flipkart Clone</title>
+  <title>Login Demo - Flipkart Clone</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -11,16 +11,19 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
+      padding: 16px;
+      box-sizing: border-box;
     }
     .login-container {
       background: white;
-      width: 400px;
+      width: min(400px, 100%);
       padding: 30px;
       border-radius: 4px;
       box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
       text-align: center;
+      box-sizing: border-box;
     }
     .logo {
       color: #2874f0;
@@ -35,6 +38,14 @@
       margin-bottom: 20px;
       font-size: 20px;
       color: #212121;
+    }
+    .demo-notice {
+      color: #92400e;
+      background: #fff7ed;
+      padding: 12px;
+      border-radius: 4px;
+      font-size: 13px;
+      line-height: 1.5;
     }
     .form-group {
       margin-bottom: 15px;
@@ -53,9 +64,12 @@
       border-radius: 2px;
       outline: none;
       font-size: 14px;
+      box-sizing: border-box;
     }
-    input:focus {
-      border-color: #2874f0;
+    input:disabled {
+      background: #f4f4f4;
+      color: #777;
+      cursor: not-allowed;
     }
     .login-btn {
       background: #fb641b;
@@ -66,11 +80,9 @@
       font-size: 15px;
       font-weight: bold;
       border-radius: 2px;
-      cursor: pointer;
       margin-top: 10px;
-    }
-    .login-btn:hover {
-      background: #e05310;
+      opacity: .6;
+      cursor: not-allowed;
     }
     .back-home {
       display: inline-block;
@@ -82,26 +94,29 @@
     .back-home:hover {
       text-decoration: underline;
     }
+    a:focus-visible {
+      outline: 3px solid #ffbf47;
+      outline-offset: 3px;
+    }
   </style>
 </head>
 <body>
-
-  <div class="login-container">
+  <main class="login-container">
     <a href="index.html" class="logo">Flipkart</a>
-    <h2>Login to your account</h2>
-    <form action="#">
+    <h2>Login UI Preview (Demo)</h2>
+    <p class="demo-notice" role="note">Demo interface only. No authentication backend is connected. The fields are disabled; do not enter real account credentials.</p>
+    <form>
       <div class="form-group">
         <label for="email">Email / Mobile Number</label>
-        <input type="text" id="email" required placeholder="Enter Email/Mobile number">
+        <input type="text" id="email" placeholder="Authentication unavailable" disabled>
       </div>
       <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" id="password" required placeholder="Enter Password">
+        <input type="password" id="password" placeholder="Authentication unavailable" disabled>
       </div>
-      <button type="button" class="login-btn">Login</button>
+      <button type="button" class="login-btn" disabled aria-disabled="true">Login unavailable (demo)</button>
     </form>
     <a href="index.html" class="back-home">Back to Home</a>
-  </div>
-
+  </main>
 </body>
 </html>

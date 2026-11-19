@@ -14,140 +14,144 @@
     <span>Explore <b>Plus</b></span>
   </div>
 
-  <div class="search-bar">
-    <input type="text" placeholder="Search for products, brands and more">
-    <button>Search</button>
-  </div>
+  <form class="search-bar" role="search" id="productSearchForm">
+    <input type="search" id="productSearch" aria-label="Search products" placeholder="Search for products, brands and more">
+    <button type="submit">Search</button>
+  </form>
 
   <div class="nav-buttons">
-    <a href="login.html" class="login-btn" style="background: white !important; color: #2874f0 !important; padding: 6px 35px !important; font-weight: bold !important; border-radius: 2px !important; text-decoration: none !important; display: inline-block !important;">Login</a>
-    <a href="#">Become a Seller</a>
-    <a href="#">More</a>
-    <a href="#" class="cart">Cart</a>
+    <a href="login.html" class="login-btn">Login</a>
+    <a href="#footer">Become a Seller</a>
+    <a href="#footer">More</a>
+    <a href="#electronics" class="cart" aria-label="Cart demo placeholder">Cart (demo)</a>
   </div>
 </header>
 
-<nav class="category-bar">
-  <a href="#">Electronics</a>
-  <a href="#">Mobiles</a>
-  <a href="#">Fashion</a>
-  <a href="#">Home & Furniture</a>
-  <a href="#">Appliances</a>
-  <a href="#">Travel</a>
-  <a href="#">Beauty & Toys</a>
-  <a href="#">Grocery</a>
+<nav class="category-bar" aria-label="Product categories">
+  <a href="#electronics">Electronics</a>
+  <a href="#electronics">Mobiles</a>
+  <a href="#fashion">Fashion</a>
+  <a href="#fashion">Home & Furniture</a>
+  <a href="#electronics">Appliances</a>
+  <a href="#footer">Travel</a>
+  <a href="#fashion">Beauty & Toys</a>
+  <a href="#footer">Grocery</a>
 </nav>
 
-<section class="banner">
-  <img src="images/banner.jpg" alt="banner">
+<section class="banner" aria-label="Promotional banner">
+  <img src="images/banner.jpg" alt="Featured shopping offers" loading="lazy">
 </section>
 
-<section class="product-section">
+<p id="searchStatus" class="search-status" role="status" aria-live="polite"></p>
+
+<section class="product-section" id="electronics">
   <div class="section-header">
     <h2>Best of Electronics</h2>
-    <a href="#">View All</a>
+    <a href="#electronics">View All</a>
   </div>
 
   <div class="product-grid">
     <div class="product-card">
-      <img src="images/headphones.jpg" alt="product">
+      <img src="images/headphones.jpg" alt="Wireless headphones" loading="lazy">
       <p class="product-name">Wireless Headphones</p>
       <p class="product-price">₹1,499 <span>₹2,999</span> 50% off</p>
-      <p class="product-rating">4.3 ★</p>
+      <p class="product-rating" aria-label="Rated 4.3 out of 5">4.3 ★</p>
     </div>
     <div class="product-card">
-      <img src="images/smartwatch.jpg" alt="product">
+      <img src="images/smartwatch.jpg" alt="Smart watch" loading="lazy">
       <p class="product-name">Smart Watch</p>
       <p class="product-price">₹2,199 <span>₹3,999</span> 45% off</p>
-      <p class="product-rating">4.1 ★</p>
+      <p class="product-rating" aria-label="Rated 4.1 out of 5">4.1 ★</p>
     </div>
     <div class="product-card">
-      <img src="images/speaker.jpg" alt="product">
+      <img src="images/speaker.jpg" alt="Bluetooth speaker" loading="lazy">
       <p class="product-name">Bluetooth Speaker</p>
       <p class="product-price">₹999 <span>₹1,999</span> 50% off</p>
-      <p class="product-rating">4.4 ★</p>
+      <p class="product-rating" aria-label="Rated 4.4 out of 5">4.4 ★</p>
     </div>
     <div class="product-card">
-      <img src="images/backpack.jpg" alt="product">
+      <img src="images/backpack.jpg" alt="Laptop backpack" loading="lazy">
       <p class="product-name">Laptop Backpack</p>
       <p class="product-price">₹699 <span>₹1,499</span> 53% off</p>
-      <p class="product-rating">4.2 ★</p>
+      <p class="product-rating" aria-label="Rated 4.2 out of 5">4.2 ★</p>
     </div>
     <div class="product-card">
-      <img src="images/keyboard.jpg" alt="product">
+      <img src="images/keyboard.jpg" alt="USB keyboard" loading="lazy">
       <p class="product-name">USB Keyboard</p>
       <p class="product-price">₹499 <span>₹999</span> 50% off</p>
-      <p class="product-rating">4.0 ★</p>
+      <p class="product-rating" aria-label="Rated 4.0 out of 5">4.0 ★</p>
     </div>
   </div>
 </section>
 
-<section class="product-section">
+<section class="product-section" id="fashion">
   <div class="section-header">
     <h2>Fashion Trends</h2>
-    <a href="#">View All</a>
+    <a href="#fashion">View All</a>
   </div>
 
   <div class="product-grid">
     <div class="product-card">
-      <img src="images/shirt.jpg" alt="product">
+      <img src="images/shirt.jpg" alt="Men's casual shirt" loading="lazy">
       <p class="product-name">Men's Casual Shirt</p>
       <p class="product-price">₹599 <span>₹1,299</span> 54% off</p>
-      <p class="product-rating">4.0 ★</p>
+      <p class="product-rating" aria-label="Rated 4.0 out of 5">4.0 ★</p>
     </div>
     <div class="product-card">
-      <img src="images/kurti.jpg" alt="product">
+      <img src="images/kurti.jpg" alt="Women's kurti" loading="lazy">
       <p class="product-name">Women's Kurti</p>
       <p class="product-price">₹449 <span>₹999</span> 55% off</p>
-      <p class="product-rating">4.2 ★</p>
+      <p class="product-rating" aria-label="Rated 4.2 out of 5">4.2 ★</p>
     </div>
     <div class="product-card">
-      <img src="images/shoes.jpg" alt="product">
+      <img src="images/shoes.jpg" alt="Running shoes" loading="lazy">
       <p class="product-name">Running Shoes</p>
       <p class="product-price">₹1,299 <span>₹2,499</span> 48% off</p>
-      <p class="product-rating">4.3 ★</p>
+      <p class="product-rating" aria-label="Rated 4.3 out of 5">4.3 ★</p>
     </div>
     <div class="product-card">
-      <img src="images/wallet.jpg" alt="product">
+      <img src="images/wallet.jpg" alt="Leather wallet" loading="lazy">
       <p class="product-name">Leather Wallet</p>
       <p class="product-price">₹349 <span>₹699</span> 50% off</p>
-      <p class="product-rating">4.1 ★</p>
+      <p class="product-rating" aria-label="Rated 4.1 out of 5">4.1 ★</p>
     </div>
     <div class="product-card">
-      <img src="images/sunglasses.jpg" alt="product">
+      <img src="images/sunglasses.jpg" alt="Sunglasses" loading="lazy">
       <p class="product-name">Sunglasses</p>
       <p class="product-price">₹399 <span>₹899</span> 55% off</p>
-      <p class="product-rating">3.9 ★</p>
+      <p class="product-rating" aria-label="Rated 3.9 out of 5">3.9 ★</p>
     </div>
   </div>
 </section>
 
-<footer class="footer">
+<footer class="footer" id="footer">
   <div class="footer-column">
     <h4>ABOUT</h4>
-    <a href="#">Contact Us</a>
-    <a href="#">About Us</a>
-    <a href="#">Careers</a>
+    <a href="#footer">Contact Us</a>
+    <a href="#footer">About Us</a>
+    <a href="#footer">Careers</a>
   </div>
   <div class="footer-column">
     <h4>HELP</h4>
-    <a href="#">Payments</a>
-    <a href="#">Shipping</a>
-    <a href="#">Returns</a>
+    <a href="#footer">Payments</a>
+    <a href="#footer">Shipping</a>
+    <a href="#footer">Returns</a>
   </div>
   <div class="footer-column">
     <h4>POLICY</h4>
-    <a href="#">Return Policy</a>
-    <a href="#">Terms of Use</a>
-    <a href="#">Privacy</a>
+    <a href="#footer">Return Policy</a>
+    <a href="#footer">Terms of Use</a>
+    <a href="#footer">Privacy</a>
   </div>
   <div class="footer-column">
     <h4>SOCIAL</h4>
-    <a href="#">Facebook</a>
-    <a href="#">Twitter</a>
-    <a href="#">Instagram</a>
+    <a href="#footer">Facebook</a>
+    <a href="#footer">Twitter</a>
+    <a href="#footer">Instagram</a>
   </div>
 </footer>
 
+<script src="product-search.js" defer></script>
+<script src="script.js" defer></script>
 </body>
 </html>

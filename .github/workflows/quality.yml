@@ -1,0 +1,19 @@
+name: Frontend quality checks
+
+on:
+  push:
+    branches: [main, audit/2026-11-quality-improvements]
+  pull_request:
+
+jobs:
+  javascript:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run product search tests
+        run: node --test
+      - name: Check storefront script syntax
+        run: node --check product-search.js && node --check script.js
