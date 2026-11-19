@@ -88,8 +88,8 @@
 
   <div class="login-container">
     <a href="index.html" class="logo">Flipkart</a>
-    <h2>Login to your account</h2>
-    <form action="#">
+    <h2>Login UI Preview (Demo)</h2>
+    <p role="note" style="color:#b45309;background:#fff7ed;padding:10px;border-radius:4px;font-size:13px;">Demo interface only. No authentication backend is connected. Do not enter real account credentials.</p>\n    <form action="#" onsubmit="event.preventDefault(); return false;">
       <div class="form-group">
         <label for="email">Email / Mobile Number</label>
         <input type="text" id="email" required placeholder="Enter Email/Mobile number">
@@ -98,7 +98,7 @@
         <label for="password">Password</label>
         <input type="password" id="password" required placeholder="Enter Password">
       </div>
-      <button type="button" class="login-btn">Login</button>
+      <button type="button" class="login-btn" disabled aria-disabled="true" style="opacity:.6;cursor:not-allowed;">Login unavailable (demo)</button>
     </form>
     <a href="index.html" class="back-home">Back to Home</a>
   </div>
